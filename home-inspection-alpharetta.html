@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Inspection in Alpharetta, GA | Trusted Vision Home Inspections</title>
+    <meta name="description" content="Professional home inspection in Alpharetta, GA. ASHI certified inspector serving North Fulton County, Avalon area, tech corridor & newer subdivisions. Inspections from $400.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-primary: #C41E3A;
+            --red-dark: #A01830;
+            --red-light: #E8354F;
+            --charcoal: #2D2D2D;
+            --charcoal-light: #4A4A4A;
+            --white: #FFFFFF;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #D4D4D4;
+            --gray-400: #A3A3A3;
+            --gray-500: #737373;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 400; line-height: 1.2; color: var(--charcoal); }
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+        h4 { font-size: 1.25rem; }
+        p { color: var(--charcoal-light); max-width: 65ch; }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all var(--transition-normal); text-decoration: none; white-space: nowrap; }
+        .btn-primary { background: var(--red-primary); color: var(--white); box-shadow: 0 4px 14px rgba(196, 30, 58, 0.35); }
+        .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196, 30, 58, 0.45); }
+        .btn-secondary { background: var(--white); color: var(--charcoal); border: 2px solid var(--gray-200); }
+        .btn-secondary:hover { border-color: var(--charcoal); background: var(--gray-50); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.3); }
+        .btn-outline-white:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+        .btn-lg { padding: 1rem 2rem; font-size: 1rem; }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: all var(--transition-normal); }
+        .header.scrolled { box-shadow: var(--shadow-md); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; gap: 2rem; }
+        .logo { display: flex; align-items: center; flex-shrink: 0; }
+        .logo-img { height: 56px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 2rem; }
+        .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+        .nav-link { padding: 0.5rem 1rem; font-size: 0.9375rem; font-weight: 500; color: var(--charcoal-light); border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+        .nav-link:hover { color: var(--charcoal); background: var(--gray-100); }
+        .nav-link.active { color: var(--red-primary); font-weight: 600; }
+        .nav-ctas { display: flex; align-items: center; gap: 0.75rem; }
+        .mobile-menu-btn { display: none; background: none; border: none; padding: 0.5rem; cursor: pointer; }
+        .mobile-menu-btn svg { width: 24px; height: 24px; color: var(--charcoal); }
+
+        .page-hero { padding: 10rem 0 4rem; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, var(--gray-50) 100%); text-align: center; }
+        .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--red-primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem; }
+        .page-hero-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--red-primary); }
+        .page-hero-eyebrow::after { content: ''; width: 24px; height: 2px; background: var(--red-primary); }
+        .page-hero h1 { margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.125rem; color: var(--gray-500); max-width: 600px; margin: 0 auto; }
+
+        .content-section { padding: 5rem 0; }
+        .content-section.alt-bg { background: var(--gray-50); }
+        .content-section h2 { margin-bottom: 1.5rem; }
+        .content-section h3 { margin-bottom: 1rem; }
+        .content-section p { font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem; }
+        .content-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
+        .content-narrow { max-width: 800px; margin: 0 auto; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .service-card { background: var(--white); padding: 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: all var(--transition-normal); }
+        .service-card:hover { box-shadow: var(--shadow-md); border-color: var(--red-primary); }
+        .service-card h4 { font-family: var(--font-body); font-weight: 600; margin-bottom: 0.5rem; }
+        .service-card p { font-size: 0.9375rem; margin-bottom: 0.75rem; }
+        .service-card .price { font-size: 1.25rem; font-weight: 700; color: var(--red-primary); }
+
+        .reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        .reason-card { background: var(--white); padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; }
+        .reason-icon { width: 64px; height: 64px; margin: 0 auto 1.25rem; background: rgba(196, 30, 58, 0.08); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; }
+        .reason-icon svg { width: 32px; height: 32px; color: var(--red-primary); }
+        .reason-card h4 { font-family: var(--font-body); font-weight: 600; margin-bottom: 0.75rem; }
+        .reason-card p { font-size: 0.9375rem; margin: 0 auto; }
+
+        .local-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        .local-info-card { background: var(--white); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--gray-200); }
+        .local-info-card h4 { font-family: var(--font-body); font-weight: 600; margin-bottom: 0.75rem; font-size: 1rem; }
+        .local-info-card ul { list-style: none; }
+        .local-info-card li { padding: 0.375rem 0; font-size: 0.9375rem; color: var(--charcoal-light); border-bottom: 1px solid var(--gray-100); }
+        .local-info-card li:last-child { border-bottom: none; }
+
+        .testimonial-block { background: var(--white); padding: 2.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border-left: 4px solid var(--red-primary); margin: 2rem 0; }
+        .testimonial-block blockquote { font-size: 1.125rem; font-style: italic; line-height: 1.8; color: var(--charcoal); margin-bottom: 1rem; max-width: none; }
+        .testimonial-block cite { font-size: 0.9375rem; font-weight: 600; color: var(--charcoal); font-style: normal; }
+        .testimonial-block .location { font-size: 0.875rem; color: var(--gray-500); }
+        .stars { color: #F59E0B; font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+        .pricing-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+        .pricing-table th, .pricing-table td { padding: 1rem 1.25rem; text-align: left; border-bottom: 1px solid var(--gray-200); }
+        .pricing-table th { background: var(--charcoal); color: var(--white); font-weight: 600; font-size: 0.9375rem; }
+        .pricing-table td { font-size: 0.9375rem; }
+        .pricing-table tr:hover { background: var(--gray-50); }
+        .pricing-table .bundle-row { background: rgba(196, 30, 58, 0.05); font-weight: 600; }
+        .pricing-table .bundle-row td { color: var(--red-primary); }
+
+        .nearby-cities { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+        .city-link { padding: 0.625rem 1.25rem; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-full); font-size: 0.9375rem; font-weight: 500; transition: all var(--transition-fast); }
+        .city-link:hover { border-color: var(--red-primary); color: var(--red-primary); background: var(--white); }
+
+        .stats { padding: 4rem 0; background: var(--charcoal); color: var(--white); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+        .stat-item { padding: 1rem; }
+        .stat-number { font-family: var(--font-display); font-size: 3rem; line-height: 1; margin-bottom: 0.5rem; color: var(--white); }
+        .stat-number span { color: var(--red-primary); }
+        .stat-label { font-size: 0.9375rem; color: var(--gray-400); font-weight: 500; }
+
+        .cta-section { padding: 6rem 0; background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%); position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at right, rgba(196, 30, 58, 0.15) 0%, transparent 70%); pointer-events: none; }
+        .cta-content { text-align: center; position: relative; z-index: 1; }
+        .cta-content h2 { color: var(--white); margin-bottom: 1rem; }
+        .cta-content p { color: var(--gray-400); font-size: 1.125rem; margin: 0 auto 2rem; }
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+        .cta-phone { display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--gray-400); font-size: 1rem; }
+        .cta-phone a { color: var(--white); font-weight: 600; transition: color var(--transition-fast); }
+        .cta-phone a:hover { color: var(--red-primary); }
+
+        .footer { padding: 4rem 0 2rem; background: var(--charcoal); color: var(--gray-400); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand { max-width: 300px; }
+        .footer-logo { margin-bottom: 1rem; }
+        .footer-logo-img { height: 60px; width: auto; filter: brightness(0) invert(1); }
+        .footer-brand p { font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-certifications { display: flex; gap: 1rem; }
+        .footer-cert { width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.625rem; font-weight: 600; color: var(--white); }
+        .footer-col h5 { color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a { font-size: 0.9375rem; transition: color var(--transition-fast); }
+        .footer-links a:hover { color: var(--white); }
+        .footer-support { text-align: center; padding: 1.5rem 0; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .bmc-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #FFDD00; color: #0D0C22; padding: 0.75rem 1.5rem; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9375rem; transition: all var(--transition-normal); box-shadow: 0 2px 8px rgba(255, 221, 0, 0.3); }
+        .bmc-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 221, 0, 0.5); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 0.875rem; }
+        .footer-legal { display: flex; gap: 1.5rem; }
+        .footer-legal a { font-size: 0.875rem; transition: color var(--transition-fast); }
+        .footer-legal a:hover { color: var(--white); }
+
+        .mobile-nav { display: none; position: fixed; top: 80px; left: 0; right: 0; background: var(--white); padding: 1.5rem; box-shadow: var(--shadow-lg); z-index: 999; }
+        .mobile-nav.active { display: block; }
+        .mobile-nav-links { list-style: none; margin-bottom: 1.5rem; }
+        .mobile-nav-links li { border-bottom: 1px solid var(--gray-100); }
+        .mobile-nav-links a { display: block; padding: 1rem 0; font-weight: 500; color: var(--charcoal); }
+        .mobile-nav-ctas { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        @media (max-width: 1024px) {
+            .content-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .reasons-grid { grid-template-columns: 1fr; max-width: 500px; margin: 2rem auto 0; }
+            .local-info { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .nav-ctas .btn-secondary { display: none; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+            .stat-number { font-size: 2.5rem; }
+            .cta-buttons { flex-direction: column; align-items: stretch; max-width: 300px; margin: 0 auto 2rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="logo.jpeg" alt="Trusted Vision Home Inspections" class="logo-img">
+                </a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html#services" class="nav-link">Services</a></li>
+                        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="index.html#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="nav-ctas">
+                        <a href="tel:+14045551234" class="btn btn-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            (404) 555-1234
+                        </a>
+                        <a href="index.html#schedule" class="btn btn-primary">Schedule Now</a>
+                    </div>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#testimonials">Reviews</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-ctas">
+                <a href="tel:+14045551234" class="btn btn-secondary btn-lg">Call (404) 555-1234</a>
+                <a href="index.html#schedule" class="btn btn-primary btn-lg">Schedule Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="page-hero-eyebrow">Alpharetta Home Inspections</span>
+            <h1>Home Inspection in Alpharetta, GA</h1>
+            <p>Thorough inspections for Alpharetta's newer subdivisions, tech corridor homes, and luxury communities. ASHI certified with 2,500+ inspections completed.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <h2>Alpharetta Home Inspection Specialists</h2>
+                    <p>Alpharetta has evolved from a quiet North Fulton town into one of Metro Atlanta's most sought-after addresses. Anchored by the Technology Park corridor and the upscale Avalon mixed-use development, this city attracts buyers looking for excellent schools, modern amenities, and well-built homes. But even in a market dominated by newer construction, a professional home inspection is essential to protect your investment.</p>
+
+                    <p>Carl Hall and Trusted Vision Home Inspections bring over 15 years of experience inspecting Alpharetta properties. The city's housing stock is overwhelmingly modern, with the majority of homes built between the 1990s and today. Subdivisions like Windward, Newtown, and Cambridge Park feature homes with complex rooflines, engineered systems, and builder-grade materials that require careful evaluation. We know what to look for in production-built homes -- from improperly installed flashing and inadequate attic ventilation to HVAC systems that are undersized for the square footage.</p>
+
+                    <p>The newer construction in developments around Downtown Alpharetta, along Old Milton Parkway, and near the Avalon district includes townhomes, luxury condos, and custom-built single-family homes. These properties often feature smart home systems, spray foam insulation, and tankless water heaters -- modern components that many inspectors are not trained to evaluate. Carl stays current with continuing education and technology to ensure every system in your Alpharetta home is properly assessed.</p>
+
+                    <p>One of the most common issues we encounter in Alpharetta homes is related to Georgia's expansive clay soils. Even homes built on engineered foundations can develop settlement cracks, sticky doors, and uneven floors when the red clay shifts during wet and dry cycles. We pay close attention to foundation indicators, grading patterns, and drainage systems to identify problems early.</p>
+
+                    <p>We also see a surprising number of HVAC efficiency issues in Alpharetta's larger homes. Homes over 3,500 square feet frequently have zoned systems or multiple units, and improper balancing or ductwork design can lead to hot and cold spots, high utility bills, and premature equipment failure. Our inspection evaluates not just whether the system runs, but whether it performs as intended.</p>
+
+                    <p>Whether you are purchasing your first home in a swim-tennis subdivision or investing in a luxury property along the Chattahoochee River corridor, Trusted Vision delivers same-day, photo-documented reports that give you complete clarity on your purchase.</p>
+                </div>
+                <div>
+                    <div class="testimonial-block">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <blockquote>"We were buying a 4-year-old home in Windward and assumed it would be perfect. Carl found improper grading that was directing water toward the foundation and an HVAC zone that was completely disconnected. The builder warranty covered all of it -- but only because Carl caught it."</blockquote>
+                        <cite>Jennifer & David K.</cite>
+                        <div class="location">Windward, Alpharetta</div>
+                    </div>
+
+                    <div class="local-info">
+                        <div class="local-info-card">
+                            <h4>Zip Codes Served</h4>
+                            <ul>
+                                <li>30004</li>
+                                <li>30005</li>
+                                <li>30009</li>
+                                <li>30022</li>
+                                <li>30023</li>
+                            </ul>
+                        </div>
+                        <div class="local-info-card">
+                            <h4>Popular Neighborhoods</h4>
+                            <ul>
+                                <li>Windward</li>
+                                <li>Avalon Area</li>
+                                <li>Downtown Alpharetta</li>
+                                <li>Newtown / Cambridge Park</li>
+                            </ul>
+                        </div>
+                        <div class="local-info-card">
+                            <h4>Nearby Landmarks</h4>
+                            <ul>
+                                <li>Avalon</li>
+                                <li>Verizon Amphitheatre</li>
+                                <li>Wills Park</li>
+                                <li>Technology Park</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2 style="text-align:center;">Inspection Services Available in Alpharetta</h2>
+            <p style="text-align:center; margin: 0 auto 2rem;">Complete inspection services tailored for Alpharetta's modern housing stock.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Home Inspection</h4>
+                    <p>Comprehensive 400+ point inspection of structure, roof, electrical, plumbing, HVAC, insulation, and all major systems.</p>
+                    <div class="price">$400</div>
+                </div>
+                <div class="service-card">
+                    <h4>Radon Testing</h4>
+                    <p>48-hour continuous radon monitoring. Particularly important for homes with finished basements and lower levels common in Alpharetta.</p>
+                    <div class="price">+$200</div>
+                </div>
+                <div class="service-card">
+                    <h4>Mold Testing</h4>
+                    <p>Air quality and surface sampling. Georgia humidity combined with newer sealed construction can create hidden moisture problems.</p>
+                    <div class="price">+$350</div>
+                </div>
+                <div class="service-card">
+                    <h4>Lead Paint Testing</h4>
+                    <p>EPA-certified lead testing for older properties in historic Alpharetta and surrounding areas.</p>
+                    <div class="price">+$150</div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: 1rem;">
+                <p style="margin: 0 auto 1.5rem;"><strong>Complete Bundle (All Services):</strong> <span style="color: var(--red-primary); font-size: 1.5rem; font-weight: 700;">$899</span> <span style="color: var(--gray-500); text-decoration: line-through;">$1,100</span></p>
+                <a href="index.html#schedule" class="btn btn-primary btn-lg">Schedule Your Alpharetta Inspection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="text-align:center;">Why Alpharetta Homebuyers Choose Us</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h4>New Construction Knowledge</h4>
+                    <p>Most Alpharetta homes are under 30 years old. We know the specific issues that production builders leave behind and what to watch for in newer systems.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h4>Same-Day Reports</h4>
+                    <p>Receive your photo-documented inspection report the same day. In Alpharetta's competitive market, timing matters.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <h4>ASHI Certified</h4>
+                    <p>Carl is ASHI certified and InterNACHI member with over 2,500 inspections and 15+ years protecting homebuyers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="content-narrow">
+                <h2 style="text-align:center;">Alpharetta Inspection Pricing</h2>
+                <p style="text-align:center; margin: 0 auto 2rem;">Transparent pricing. No hidden fees. Same-day photo reports included.</p>
+                <table class="pricing-table">
+                    <thead><tr><th>Service</th><th>Price</th></tr></thead>
+                    <tbody>
+                        <tr><td>Home Inspection (400+ Points)</td><td>$400</td></tr>
+                        <tr><td>Radon Testing (Add-On)</td><td>+$200</td></tr>
+                        <tr><td>Mold Testing (Add-On)</td><td>+$350</td></tr>
+                        <tr><td>Lead Paint Testing (Add-On)</td><td>+$150</td></tr>
+                        <tr class="bundle-row"><td>Complete Bundle (All Services)</td><td>$899 (Save $201)</td></tr>
+                    </tbody>
+                </table>
+                <div style="text-align:center; margin-top: 2rem;">
+                    <a href="index.html#schedule" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Cities -->
+    <section class="content-section">
+        <div class="container">
+            <h2 style="text-align:center;">Also Serving Nearby Cities</h2>
+            <p style="text-align:center; margin: 0 auto;">We provide the same thorough inspections across North Metro Atlanta.</p>
+            <div class="nearby-cities" style="justify-content: center;">
+                <a href="home-inspection-roswell.html" class="city-link">Roswell</a>
+                <a href="home-inspection-sandy-springs.html" class="city-link">Sandy Springs</a>
+                <a href="home-inspection-dunwoody.html" class="city-link">Dunwoody</a>
+                <a href="home-inspection-marietta.html" class="city-link">Marietta</a>
+                <a href="home-inspection-buckhead.html" class="city-link">Buckhead</a>
+                <a href="home-inspection-atlanta.html" class="city-link">Atlanta</a>
+                <a href="home-inspection-decatur.html" class="city-link">Decatur</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number">2,500<span>+</span></div><div class="stat-label">Inspections Completed</div></div>
+                <div class="stat-item"><div class="stat-number">15<span>+</span></div><div class="stat-label">Years Experience</div></div>
+                <div class="stat-item"><div class="stat-number">100<span>%</span></div><div class="stat-label">Satisfaction Rate</div></div>
+                <div class="stat-item"><div class="stat-number">250<span>+</span></div><div class="stat-label">5-Star Reviews</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Alpharetta Home Inspection?</h2>
+                <p>Schedule your inspection with Carl today. Same-week availability for most Alpharetta appointments.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#schedule" class="btn btn-primary btn-lg">Schedule Your Inspection <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                    <a href="index.html#schedule" class="btn btn-outline-white btn-lg">Get a Free Quote</a>
+                </div>
+                <p class="cta-phone">Or call us directly: <a href="tel:+14045551234">(404) 555-1234</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="logo.jpeg" alt="Trusted Vision Home Inspections" class="footer-logo-img"></div>
+                    <p>See your investment clearly. Comprehensive home inspections for Metro Atlanta homebuyers and agents.</p>
+                    <div class="footer-certifications"><div class="footer-cert">ASHI</div><div class="footer-cert">InterNACHI</div></div>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Home Inspection</a></li>
+                        <li><a href="index.html#services">Radon Testing</a></li>
+                        <li><a href="index.html#services">Mold Testing</a></li>
+                        <li><a href="index.html#services">Lead Paint Testing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Service Areas</h5>
+                    <ul class="footer-links">
+                        <li><a href="home-inspection-alpharetta.html">Alpharetta</a></li>
+                        <li><a href="home-inspection-roswell.html">Roswell</a></li>
+                        <li><a href="home-inspection-atlanta.html">Atlanta</a></li>
+                        <li><a href="home-inspection-marietta.html">Marietta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="tel:+14045551234">(404) 555-1234</a></li>
+                        <li><a href="mailto:info@trustedvision.com">info@trustedvision.com</a></li>
+                        <li>Metro Atlanta, GA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-support">
+                <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="bmc-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.062 2.014.13l.04.005c.23.029.46.06.692.095.268.04.418.297.342.553l-.022.078a.787.787 0 01-.765.617h-.005a24.467 24.467 0 00-3.622.12 23.282 23.282 0 00-1.968.334c-.228.054-.456.112-.681.176-.08.023-.16.047-.238.073a.787.787 0 01-.753-.098.786.786 0 01-.304-.667c.008-.15.058-.295.142-.416l.01-.012a2.16 2.16 0 01.625-.505 6.06 6.06 0 011.17-.479c1.105-.328 2.258-.45 3.405-.505a26.485 26.485 0 014.064.133c.388.055.698.378.698.768 0 .39-.31.714-.698.768a25.09 25.09 0 00-4.064-.133c-1.147.054-2.3.177-3.405.505a6.06 6.06 0 00-1.17.479 2.16 2.16 0 00-.625.505l-.01.012a.786.786 0 00-.142.416c-.016.245.094.488.304.667a.787.787 0 00.753.098c.078-.026.158-.05.238-.073.225-.064.453-.122.681-.176a23.282 23.282 0 011.968-.334 24.467 24.467 0 013.622-.12h.005a.787.787 0 00.765-.617l.022-.078c.076-.256-.074-.513-.342-.553"/><path d="M7.5 12.5c0 3.59 2.91 6.5 6.5 6.5s6.5-2.91 6.5-6.5h-2c0 2.485-2.015 4.5-4.5 4.5S9.5 14.985 9.5 12.5h-2z"/></svg>
+                    Support this project
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trusted Vision Home Inspections. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        mobileMenuBtn.addEventListener('click', () => mobileNav.classList.toggle('active'));
+        mobileNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => mobileNav.classList.remove('active')); });
+    </script>
+</body>
+</html>
