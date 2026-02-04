@@ -490,8 +490,10 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .service-card {
@@ -1104,7 +1106,7 @@
             }
 
             .services-grid {
-                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
             }
 
             .pricing-grid {
@@ -1400,75 +1402,15 @@
                 <div class="service-card">
                     <div class="service-card-image">
                         <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Home inspection">
-                        <span class="service-tag">Most Popular</span>
+                        <span class="service-tag">Core Service</span>
                     </div>
                     <div class="service-card-content">
-                        <h4>Residential Inspection</h4>
-                        <p>Complete 400+ point inspection of your home's major systems and components.</p>
+                        <h4>Home Inspection</h4>
+                        <p>Complete 400+ point inspection of your home's major systems and components. Foundation to roof coverage.</p>
                         <div class="service-card-footer">
                             <div class="service-price">
                                 Starting at
                                 <span>$400</span>
-                            </div>
-                            <a href="#schedule" class="service-link">
-                                Schedule
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80" alt="Pre-purchase inspection">
-                    </div>
-                    <div class="service-card-content">
-                        <h4>Pre-Purchase Inspection</h4>
-                        <p>Know exactly what you're buying before you close. Detailed findings for negotiations.</p>
-                        <div class="service-card-footer">
-                            <div class="service-price">
-                                Starting at
-                                <span>$400</span>
-                            </div>
-                            <a href="#schedule" class="service-link">
-                                Schedule
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Pre-listing inspection">
-                    </div>
-                    <div class="service-card-content">
-                        <h4>Pre-Listing Inspection</h4>
-                        <p>Sell with confidence. Identify issues before buyers do and price your home right.</p>
-                        <div class="service-card-footer">
-                            <div class="service-price">
-                                Starting at
-                                <span>$400</span>
-                            </div>
-                            <a href="#schedule" class="service-link">
-                                Schedule
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-image">
-                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="New construction inspection">
-                    </div>
-                    <div class="service-card-content">
-                        <h4>New Construction</h4>
-                        <p>Even new homes have issues. Catch builder mistakes before your warranty expires.</p>
-                        <div class="service-card-footer">
-                            <div class="service-price">
-                                Starting at
-                                <span>$450</span>
                             </div>
                             <a href="#schedule" class="service-link">
                                 Schedule
@@ -1484,11 +1426,11 @@
                     </div>
                     <div class="service-card-content">
                         <h4>Radon Testing</h4>
-                        <p>The invisible threat. Professional testing to ensure your family's safety.</p>
+                        <p>The invisible threat. Professional radon testing to ensure your family's safety and health.</p>
                         <div class="service-card-footer">
                             <div class="service-price">
                                 Add-on
-                                <span>$200</span>
+                                <span>+$200</span>
                             </div>
                             <a href="#schedule" class="service-link">
                                 Add to inspection
@@ -1500,18 +1442,38 @@
 
                 <div class="service-card">
                     <div class="service-card-image">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Additional testing services">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Mold testing">
                     </div>
                     <div class="service-card-content">
-                        <h4>Additional Testing</h4>
-                        <p>Mold, lead paint, and more. Comprehensive testing for complete peace of mind.</p>
+                        <h4>Mold Testing</h4>
+                        <p>Comprehensive mold screening to detect hidden mold growth that can affect your health and property value.</p>
                         <div class="service-card-footer">
                             <div class="service-price">
-                                Starting at
-                                <span>$150</span>
+                                Add-on
+                                <span>+$350</span>
                             </div>
                             <a href="#schedule" class="service-link">
-                                View options
+                                Add to inspection
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="Lead based paint testing">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Lead Based Paint Test</h4>
+                        <p>Essential for older homes. Detect lead paint hazards to protect your family, especially children.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Add-on
+                                <span>+$150</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Add to inspection
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                             </a>
                         </div>
@@ -1532,7 +1494,7 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4>Essential</h4>
+                        <h4>Inspection Only</h4>
                         <div class="pricing-amount">
                             <span class="currency">$</span>
                             <span class="value">400</span>
@@ -1556,22 +1518,26 @@
                             Photo documentation
                         </li>
                     </ul>
-                    <a href="#schedule" class="btn btn-secondary">Select Essential</a>
+                    <a href="#schedule" class="btn btn-secondary">Select Basic</a>
                 </div>
 
-                <!-- Decoy: priced close to Complete but with far fewer features, making Complete the obvious choice -->
+                <!-- Decoy: $750 for inspection + radon only. Close in price to Complete at $899 but with far fewer tests, making Complete the obvious choice -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h4>Essential Plus</h4>
+                        <h4>Inspection + Radon</h4>
                         <div class="pricing-amount">
                             <span class="currency">$</span>
-                            <span class="value">599</span>
+                            <span class="value">600</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Everything in Essential
+                            Complete home inspection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            400+ point checklist
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1579,30 +1545,34 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            48-hour report delivery
+                            Same-day digital report
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Phone consultation
+                            Photo documentation
                         </li>
                     </ul>
-                    <a href="#schedule" class="btn btn-secondary">Select Plus</a>
+                    <a href="#schedule" class="btn btn-secondary">Select Radon Bundle</a>
                 </div>
 
                 <div class="pricing-card featured">
                     <span class="pricing-badge">Best Value</span>
                     <div class="pricing-header">
-                        <h4>Complete</h4>
+                        <h4>Complete Protection</h4>
                         <div class="pricing-amount">
                             <span class="currency">$</span>
-                            <span class="value">700</span>
+                            <span class="value">899</span>
                         </div>
-                        <span class="pricing-savings">Save $250 vs. add-ons</span>
+                        <span class="pricing-savings">Save $201 vs. individual pricing</span>
                     </div>
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Everything in Essential
+                            Complete home inspection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            400+ point checklist
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1610,19 +1580,19 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Lead paint testing included
+                            Mold testing included
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Mold screening included
+                            Lead based paint test included
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            Priority same-day scheduling
+                            Same-day digital report
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            90-day warranty + free re-inspection
+                            Priority scheduling
                         </li>
                     </ul>
                     <a href="#schedule" class="btn btn-primary">Select Complete</a>
@@ -1630,11 +1600,12 @@
             </div>
 
             <div class="pricing-note">
-                <p>Need just one add-on? Build your own package:</p>
+                <p>Prefer to add services individually? Build your own:</p>
                 <div class="addon-chips">
-                    <span class="addon-chip">Radon: +$200</span>
-                    <span class="addon-chip">Mold: +$350</span>
-                    <span class="addon-chip">Lead Paint: +$150</span>
+                    <span class="addon-chip">Home Inspection: $400</span>
+                    <span class="addon-chip">Radon Test: +$200</span>
+                    <span class="addon-chip">Mold Test: +$350</span>
+                    <span class="addon-chip">Lead Paint Test: +$150</span>
                 </div>
             </div>
         </div>
@@ -1785,11 +1756,10 @@
                 <div class="footer-col">
                     <h5>Services</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Residential Inspection</a></li>
-                        <li><a href="#">Pre-Purchase</a></li>
-                        <li><a href="#">Pre-Listing</a></li>
-                        <li><a href="#">New Construction</a></li>
-                        <li><a href="#">Radon Testing</a></li>
+                        <li><a href="#services">Home Inspection</a></li>
+                        <li><a href="#services">Radon Testing</a></li>
+                        <li><a href="#services">Mold Testing</a></li>
+                        <li><a href="#services">Lead Paint Testing</a></li>
                     </ul>
                 </div>
 
