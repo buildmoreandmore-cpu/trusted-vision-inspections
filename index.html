@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted Vision Home Inspections | See Your Investment Clearly</title>
+    <meta name="description" content="Comprehensive home inspections that reveal the truth about your property. Serving Metro Atlanta homebuyers and agents with detailed 400+ point inspections.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red-primary: #C41E3A;
+            --red-dark: #A01830;
+            --red-light: #E8354F;
+            --charcoal: #2D2D2D;
+            --charcoal-light: #4A4A4A;
+            --white: #FFFFFF;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #D4D4D4;
+            --gray-400: #A3A3A3;
+            --gray-500: #737373;
+
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+            --transition-slow: 400ms ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--charcoal);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+        h4 { font-size: 1.25rem; }
+
+        p {
+            color: var(--charcoal-light);
+            max-width: 65ch;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-body);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--red-primary);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(196, 30, 58, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--charcoal);
+            border: 2px solid var(--gray-200);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--charcoal);
+            background: var(--gray-50);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--charcoal);
+            border-color: var(--white);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--charcoal-light);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-link:hover {
+            color: var(--charcoal);
+            background: var(--gray-100);
+        }
+
+        .nav-ctas {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--charcoal);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 5rem;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, var(--gray-50) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(196, 30, 58, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--red-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--red-primary);
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-500);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--gray-500);
+        }
+
+        .trust-badge svg {
+            width: 20px;
+            height: 20px;
+            color: var(--red-primary);
+        }
+
+        .trust-badge strong {
+            color: var(--charcoal);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.4));
+            z-index: 1;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-image-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            z-index: 2;
+            background: var(--white);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .badge-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--red-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .badge-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--white);
+        }
+
+        .badge-content h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 0.125rem;
+        }
+
+        .badge-content p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-normal);
+        }
+
+        .why-card:hover {
+            background: var(--gray-50);
+            transform: translateY(-4px);
+        }
+
+        .why-card-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.25rem;
+            background: rgba(196, 30, 58, 0.08);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-card-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--red-primary);
+        }
+
+        .why-card h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-card p {
+            font-size: 0.9375rem;
+            margin: 0 auto;
+        }
+
+        /* Services */
+        .services {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+
+        .service-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--red-primary);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .service-price {
+            font-size: 0.875rem;
+        }
+
+        .service-price span {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .service-link {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--red-primary);
+            transition: gap var(--transition-fast);
+        }
+
+        .service-link:hover {
+            gap: 0.625rem;
+        }
+
+        .service-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--gray-300);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--red-primary);
+            box-shadow: 0 8px 30px rgba(196, 30, 58, 0.15);
+            transform: scale(1.02);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--red-primary);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-header h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-amount {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .pricing-amount .currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .pricing-amount .value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+
+        .pricing-savings {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--red-primary);
+            background: rgba(196, 30, 58, 0.08);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.625rem 0;
+            font-size: 0.9375rem;
+            color: var(--charcoal-light);
+        }
+
+        .pricing-features li svg {
+            width: 20px;
+            height: 20px;
+            color: var(--red-primary);
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+        }
+
+        .pricing-note p {
+            font-size: 0.9375rem;
+            margin: 0 auto 1rem;
+        }
+
+        .addon-chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .addon-chip {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Stats */
+        .stats {
+            padding: 4rem 0;
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .stat-number span {
+            color: var(--red-primary);
+        }
+
+        .stat-label {
+            font-size: 0.9375rem;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-stars svg {
+            width: 20px;
+            height: 20px;
+            color: #FBBF24;
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .testimonial-info h5 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 0.125rem;
+        }
+
+        .testimonial-info p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+        }
+
+        .testimonials-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .google-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-md);
+        }
+
+        .google-rating img {
+            height: 24px;
+        }
+
+        .google-rating span {
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(ellipse at right, rgba(196, 30, 58, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            color: var(--gray-400);
+            font-size: 1.125rem;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--gray-400);
+            font-size: 1rem;
+        }
+
+        .cta-phone a {
+            color: var(--white);
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .cta-phone a:hover {
+            color: var(--red-primary);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0 2rem;
+            background: var(--charcoal);
+            color: var(--gray-400);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-certifications {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-cert {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.625rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .footer-col h5 {
+            color: var(--white);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.9375rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.875rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-legal a {
+            font-size: 0.875rem;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-legal a:hover {
+            color: var(--white);
+        }
+
+        .footer-support {
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .bmc-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FFDD00;
+            color: #0D0C22;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all var(--transition-normal);
+            box-shadow: 0 2px 8px rgba(255, 221, 0, 0.3);
+        }
+
+        .bmc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 221, 0, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image-wrapper img {
+                height: 350px;
+            }
+
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+                order: -1;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-ctas .btn-secondary {
+                display: none;
+            }
+
+            .hero {
+                padding: 7rem 0 4rem;
+            }
+
+            .hero-trust {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .why-us-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 300px;
+                margin: 0 auto 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-nav-links li {
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            padding: 1rem 0;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        .mobile-nav-ctas {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L42 16V32L24 44L6 32V16L24 4Z" fill="#2D2D2D"/>
+                            <path d="M24 8L38 18V30L24 40L10 30V18L24 8Z" fill="#FFFFFF"/>
+                            <circle cx="22" cy="22" r="8" stroke="#C41E3A" stroke-width="3" fill="none"/>
+                            <line x1="27" y1="27" x2="34" y2="34" stroke="#C41E3A" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M19 22L21 24L26 19" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span>Trusted Vision</span>
+                </a>
+
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-ctas">
+                        <a href="tel:+14045551234" class="btn btn-secondary">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            (404) 555-1234
+                        </a>
+                        <a href="#schedule" class="btn btn-primary">Schedule Now</a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-ctas">
+                <a href="tel:+14045551234" class="btn btn-secondary btn-lg">Call (404) 555-1234</a>
+                <a href="#schedule" class="btn btn-primary btn-lg">Schedule Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <span class="hero-eyebrow animate-in">Serving Metro Atlanta</span>
+                    <h1 class="animate-in delay-1">See Your Investment Clearly Before You Sign</h1>
+                    <p class="hero-subtitle animate-in delay-2">Comprehensive home inspections that reveal the truth about your property—so you can negotiate with confidence or walk away informed.</p>
+
+                    <div class="hero-ctas animate-in delay-3">
+                        <a href="#schedule" class="btn btn-primary btn-lg">
+                            Schedule Inspection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="tel:+14045551234" class="btn btn-secondary btn-lg">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call Now
+                        </a>
+                    </div>
+
+                    <div class="hero-trust animate-in delay-4">
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                            <span><strong>ASHI</strong> Certified</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            <span><strong>InterNACHI</strong> Member</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <span><strong>250+</strong> 5-Star Reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image animate-in delay-2">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Beautiful home exterior ready for inspection">
+                        <div class="hero-image-badge">
+                            <div class="badge-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <div class="badge-content">
+                                <h4>Next Available: Tomorrow</h4>
+                                <p>Same-week scheduling available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Homebuyers Trust Us</h2>
+                <p>We see what others miss, giving you the clarity to make confident decisions about your biggest investment.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                    <h4>Nothing Hidden</h4>
+                    <p>Our 400+ point inspection covers everything others skip—from foundation to roof.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h4>Same-Day Reports</h4>
+                    <p>Digital reports with photos delivered within 24 hours—so you never miss a deadline.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h4>We Explain Everything</h4>
+                    <p>Walk the property with us and ask anything. No jargon, just clear answers.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4>100% Satisfaction</h4>
+                    <p>Backed by our protection guarantee. If you're not satisfied, we'll make it right.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Inspection Services</h2>
+                <p>Comprehensive inspections to protect your investment and give you peace of mind.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Home inspection">
+                        <span class="service-tag">Most Popular</span>
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Residential Inspection</h4>
+                        <p>Complete 400+ point inspection of your home's major systems and components.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Starting at
+                                <span>$400</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Schedule
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80" alt="Pre-purchase inspection">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Pre-Purchase Inspection</h4>
+                        <p>Know exactly what you're buying before you close. Detailed findings for negotiations.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Starting at
+                                <span>$400</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Schedule
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Pre-listing inspection">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Pre-Listing Inspection</h4>
+                        <p>Sell with confidence. Identify issues before buyers do and price your home right.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Starting at
+                                <span>$400</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Schedule
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80" alt="New construction inspection">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>New Construction</h4>
+                        <p>Even new homes have issues. Catch builder mistakes before your warranty expires.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Starting at
+                                <span>$450</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Schedule
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Radon testing">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Radon Testing</h4>
+                        <p>The invisible threat. Professional testing to ensure your family's safety.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Add-on
+                                <span>$200</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                Add to inspection
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Additional testing services">
+                    </div>
+                    <div class="service-card-content">
+                        <h4>Additional Testing</h4>
+                        <p>Mold, lead paint, and more. Comprehensive testing for complete peace of mind.</p>
+                        <div class="service-card-footer">
+                            <div class="service-price">
+                                Starting at
+                                <span>$150</span>
+                            </div>
+                            <a href="#schedule" class="service-link">
+                                View options
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Clear Pricing. No Surprises.</h2>
+                <p>Know exactly what you're paying before you book. Choose a package or build your own.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Essential</h4>
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="value">400</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Complete home inspection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            400+ point checklist
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Same-day digital report
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Photo documentation
+                        </li>
+                    </ul>
+                    <a href="#schedule" class="btn btn-secondary">Select Essential</a>
+                </div>
+
+                <!-- Decoy: priced close to Complete but with far fewer features, making Complete the obvious choice -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Essential Plus</h4>
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="value">599</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Everything in Essential
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Radon testing included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            48-hour report delivery
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Phone consultation
+                        </li>
+                    </ul>
+                    <a href="#schedule" class="btn btn-secondary">Select Plus</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Best Value</span>
+                    <div class="pricing-header">
+                        <h4>Complete</h4>
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="value">700</span>
+                        </div>
+                        <span class="pricing-savings">Save $250 vs. add-ons</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Everything in Essential
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Radon testing included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Lead paint testing included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mold screening included
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Priority same-day scheduling
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            90-day warranty + free re-inspection
+                        </li>
+                    </ul>
+                    <a href="#schedule" class="btn btn-primary">Select Complete</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>Need just one add-on? Build your own package:</p>
+                <div class="addon-chips">
+                    <span class="addon-chip">Radon: +$200</span>
+                    <span class="addon-chip">Mold: +$350</span>
+                    <span class="addon-chip">Lead Paint: +$150</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2,500<span>+</span></div>
+                    <div class="stat-label">Inspections Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15<span>+</span></div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100<span>%</span></div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">250<span>+</span></div>
+                    <div class="stat-label">5-Star Reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real stories from homebuyers and agents who trusted us with their biggest decisions.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"They found a foundation issue that would have cost us $15,000 to fix. Saved us from making a huge mistake. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-info">
+                            <h5>Marcus R.</h5>
+                            <p>Homebuyer in Alpharetta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"I recommend Trusted Vision to all my clients. Their reports are thorough and their communication is excellent. True professionals."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JT</div>
+                        <div class="testimonial-info">
+                            <h5>Jennifer T.</h5>
+                            <p>Real Estate Agent, Buckhead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"First-time homebuyer here. They walked me through everything, explained it in terms I could understand. Never felt rushed or confused."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SD</div>
+                        <div class="testimonial-info">
+                            <h5>Sarah D.</h5>
+                            <p>Homebuyer in Decatur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-footer">
+                <div class="google-rating">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    <span>Rated 4.9/5 from 250+ reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="schedule">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to See Your Home Clearly?</h2>
+                <p>Schedule your inspection today. Same-week availability for most appointments.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Schedule Your Inspection
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#" class="btn btn-outline-white btn-lg">Get a Free Quote</a>
+                </div>
+                <p class="cta-phone">Or call us directly: <a href="tel:+14045551234">(404) 555-1234</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L42 16V32L24 44L6 32V16L24 4Z" fill="#FFFFFF"/>
+                            <path d="M24 8L38 18V30L24 40L10 30V18L24 8Z" fill="#2D2D2D"/>
+                            <circle cx="22" cy="22" r="8" stroke="#C41E3A" stroke-width="3" fill="none"/>
+                            <line x1="27" y1="27" x2="34" y2="34" stroke="#C41E3A" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M19 22L21 24L26 19" stroke="#C41E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Trusted Vision</span>
+                    </div>
+                    <p>See your investment clearly. Comprehensive home inspections for Metro Atlanta homebuyers and agents.</p>
+                    <div class="footer-certifications">
+                        <div class="footer-cert">ASHI</div>
+                        <div class="footer-cert">InterNACHI</div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Inspection</a></li>
+                        <li><a href="#">Pre-Purchase</a></li>
+                        <li><a href="#">Pre-Listing</a></li>
+                        <li><a href="#">New Construction</a></li>
+                        <li><a href="#">Radon Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="tel:+14045551234">(404) 555-1234</a></li>
+                        <li><a href="mailto:info@trustedvision.com">info@trustedvision.com</a></li>
+                        <li>Metro Atlanta, GA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-support">
+                <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="bmc-btn">
+                    <svg width="20" height="20" viewBox="0 0 884 1279" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518Z" fill="#0D0C22"/><path d="M803.896 388.891L802.916 389.166L803.896 388.891Z" fill="#0D0C22"/><path d="M791.484 297.377C791.359 297.361 791.237 297.332 791.118 297.29C791.482 297.## 791.## 297.## 791.484 297.377Z" fill="#0D0C22"/><path d="M803.044 388.625C803.356 388.724 803.672 388.811 803.992 388.891L803.044 388.625Z" fill="#0D0C22"/><path d="M832.762 609.656L833.209 610.578L832.762 609.656Z" fill="#0D0C22"/><path d="M683.426 0.959473C674.846 5.15547 666.032 8.83547 657.076 12.1755C579.075 43.0655 501.074 73.9555 423.073 104.845C420.777 105.8 418.575 107.266 416.088 107.266C413.348 107.266 411.031 105.571 408.807 104.395L282.575 38.4495C277.792 35.9415 272.802 33.2275 267.593 31.4335C262.384 29.6395 256.725 28.8995 251.379 29.4595C229.077 31.8195 207.109 43.2395 189.685 56.6875C162.206 77.7575 141.083 106.487 128.209 138.957C115.334 171.427 110.779 206.967 115.454 241.617C120.13 276.267 134.038 309.447 155.576 337.487C177.114 365.527 205.58 387.697 238.07 401.367C263.924 412.077 291.806 417.477 319.759 417.307C347.711 417.137 375.516 411.397 401.219 400.367C427.399 389.127 451.169 372.987 471.169 352.987C491.169 332.987 507.309 309.217 518.559 283.037C529.809 256.857 535.559 228.557 535.559 200.057C535.559 171.557 529.809 143.257 518.559 117.077C510.494 98.3495 499.644 81.0975 486.339 65.8975L633.539 1.09547H633.544C633.544 1.09547 693.481 -2.50553 683.426 0.959473Z" fill="#FFDD00"/></svg>
+                    Support this project
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trusted Vision Home Inspections. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking links
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.why-card, .service-card, .pricing-card, .testimonial-card, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
