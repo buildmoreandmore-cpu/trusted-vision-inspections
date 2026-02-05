@@ -730,42 +730,6 @@
             font-weight: 500;
         }
 
-        /* Stats */
-        .stats {
-            padding: 4rem 0;
-            background: var(--charcoal);
-            color: var(--white);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 1rem;
-        }
-
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            color: var(--white);
-        }
-
-        .stat-number span {
-            color: var(--red-primary);
-        }
-
-        .stat-label {
-            font-size: 0.9375rem;
-            color: var(--gray-400);
-            font-weight: 500;
-        }
-
         /* Testimonials */
         .testimonials {
             padding: 6rem 0;
@@ -955,7 +919,6 @@
         .footer-logo-img {
             height: 60px;
             width: auto;
-            filter: brightness(0) invert(1);
         }
 
         .footer-brand p {
@@ -1115,10 +1078,6 @@
                 order: -1;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .testimonials-grid {
                 grid-template-columns: 1fr;
                 max-width: 500px;
@@ -1158,14 +1117,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
 
             .cta-buttons {
                 flex-direction: column;
@@ -1598,30 +1549,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">2,500<span>+</span></div>
-                    <div class="stat-label">Inspections Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15<span>+</span></div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100<span>%</span></div>
-                    <div class="stat-label">Satisfaction Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">250<span>+</span></div>
-                    <div class="stat-label">5-Star Reviews</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -1846,7 +1773,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.why-card, .service-card, .pricing-card, .testimonial-card, .stat-item').forEach(el => {
+        document.querySelectorAll('.why-card, .service-card, .pricing-card, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
     </script>
