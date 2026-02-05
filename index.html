@@ -63,6 +63,11 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* Typography */
@@ -1049,7 +1054,7 @@
         @media (max-width: 1024px) {
             .hero-inner {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2.5rem;
             }
 
             .hero-image {
@@ -1062,15 +1067,18 @@
 
             .why-us-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
 
             .services-grid {
                 max-width: 100%;
+                gap: 1.5rem;
             }
 
             .pricing-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
+                gap: 1.5rem;
             }
 
             .pricing-card.featured {
@@ -1082,14 +1090,20 @@
                 grid-template-columns: 1fr;
                 max-width: 500px;
                 margin: 0 auto;
+                gap: 1.5rem;
             }
 
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
             }
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -1103,7 +1117,15 @@
             }
 
             .hero {
-                padding: 7rem 0 4rem;
+                padding: 6rem 0 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
             }
 
             .hero-trust {
@@ -1112,17 +1134,101 @@
                 gap: 1rem;
             }
 
+            .hero-image-wrapper img {
+                height: 280px;
+            }
+
+            .hero-image-badge {
+                padding: 0.75rem 1rem;
+                gap: 0.75rem;
+            }
+
+            .badge-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .badge-content h4 {
+                font-size: 0.875rem;
+            }
+
+            .badge-content p {
+                font-size: 0.75rem;
+            }
+
+            .why-us,
+            .services,
+            .pricing,
+            .testimonials {
+                padding: 4rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
             .why-us-grid,
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.25rem;
             }
 
+            .why-card,
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .pricing-card {
+                padding: 1.5rem;
+            }
+
+            .pricing-amount .value {
+                font-size: 2.5rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1rem;
+            }
+
+            .cta-section {
+                padding: 4rem 0;
+            }
+
+            .cta-content h2 {
+                font-size: 1.75rem;
+            }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
                 max-width: 300px;
                 margin: 0 auto 2rem;
+            }
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+            }
+
+            .btn-lg {
+                padding: 0.875rem 1.75rem;
+                font-size: 0.9375rem;
+            }
+
+            .footer {
+                padding: 3rem 0 1.5rem;
             }
 
             .footer-grid {
@@ -1134,6 +1240,142 @@
                 flex-direction: column;
                 gap: 1rem;
                 text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.875rem;
+            }
+
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.25rem; }
+
+            .hero {
+                padding: 5.5rem 0 2.5rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-ctas .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .trust-badge {
+                font-size: 0.8125rem;
+                padding: 0.5rem 0.875rem;
+            }
+
+            .hero-image-wrapper img {
+                height: 220px;
+            }
+
+            .hero-image-badge {
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+            }
+
+            .why-us,
+            .services,
+            .pricing,
+            .testimonials {
+                padding: 3rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .why-card,
+            .service-card,
+            .pricing-card,
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+
+            .why-card-icon,
+            .service-card-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .pricing-amount .value {
+                font-size: 2.25rem;
+            }
+
+            .pricing-features li {
+                font-size: 0.875rem;
+                padding: 0.5rem 0;
+            }
+
+            .addon-chips {
+                gap: 0.5rem;
+            }
+
+            .addon-chip {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+
+            .testimonials-grid {
+                gap: 1rem;
+            }
+
+            .testimonial-quote {
+                font-size: 0.9375rem;
+                line-height: 1.6;
+            }
+
+            .testimonial-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 0.875rem;
+            }
+
+            .google-rating {
+                padding: 0.625rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+
+            .cta-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-content p {
+                font-size: 0.9375rem;
+            }
+
+            .footer-brand {
+                max-width: 100%;
+            }
+
+            .footer-logo-img {
+                height: 50px;
+            }
+
+            .footer-links h5,
+            .footer-contact h5 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .footer-links ul li a,
+            .footer-contact p {
+                font-size: 0.875rem;
             }
         }
 
